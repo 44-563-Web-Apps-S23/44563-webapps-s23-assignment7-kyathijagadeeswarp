@@ -23,7 +23,7 @@
     <div class="container">
       <button type="button" class="btn btn-primary" onclick="startTime()">Start Timer</button>
       <button type="button" class="btn btn-info" onclick="recordTime()">React</button>
-      
+      <button type="button" class="btn btn-secondary" onclick="randomStart()">Random Start</button>
     </div>
     
     
@@ -34,6 +34,7 @@
           reactTime = Date.now()
           console.log(reactTime)
       }
+      
       function startTime(){
           for(let i=0;i<=startCount;i++){
               setTimeout(() => {
@@ -55,6 +56,10 @@
         startCount = Math.floor(Math.random()*(10-2+1)+2)
         startTime()
     }
+
+
     </script>
+  
+
 </body>
 </html>
