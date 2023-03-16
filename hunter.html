@@ -121,6 +121,7 @@
       gameOver = true;
       penalty += 4;
     }
+
     var penaltyA = document.getElementById("penalty");
     penaltyA.innerHTML = ("Penalty is " + penalty);
     lastCheck = position;
@@ -152,7 +153,23 @@
     }
     penalty += 2
     document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
-  }  
+  }
+
+  function newGame() {
+    checkCount = 0;
+    penalty = 0;
+    lastCheck = 0;
+    mouseLocation = Math.floor(Math.random() * 23);
+    catLocation = Math.floor(Math.random() * 23);
+    document.getElementById("bushes").innerHTML = "Number of bushes checked is zero."
+    document.getElementById("penalty").innerHTML = "Penalty is zero."
+    document.getElementById("help").innerHTML = "Help report"
+    for (let i = 0; i < 24; i++) {
+
+        document.getElementById(ids[i]).src = "bush.jpg"
+    }
+  }
+  
 </script>
 </body>
 </html>
