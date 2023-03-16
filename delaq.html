@@ -53,11 +53,9 @@
         let inputRead = document.getElementById("userIn").value;
         element.innerHTML = inputRead;
         element.className = "delayQ";
-
         /* add it to the container */
         let container = document.getElementById('target')
         container.appendChild(element)
-
     }
     function get() {
         var queueItems = document.getElementsByClassName("delayQ");
@@ -66,7 +64,6 @@
             queueItems[length - 1].remove();
         }
     }
-
     function delay() {
         var queueItems = document.getElementsByClassName("delayQ");
         var length = queueItems.length;
@@ -77,8 +74,6 @@
             parentElem.insertBefore(removedItem, parentElem.firstChild);
         }
     }
-
-
     function Promote(){
         var queueItems = document.getElementsByClassName("delayQ");
         let len=queueItems.length;
@@ -93,5 +88,4 @@
 	        container.insertBefore(removedItem,container.firstChild)
     }
 </script>
-
 </html>
